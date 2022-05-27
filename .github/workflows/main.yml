@@ -1,4 +1,4 @@
-name: format_write
+name: deploy 
 
 on:
   push:
@@ -7,10 +7,10 @@ on:
 
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     
     steps:
+
     - name: ssh commands using password
       uses: appleboy/ssh-action@master
       with:
@@ -18,8 +18,9 @@ jobs:
         username: ${{ secrets.USSER_SECRET }}
         key: ${{ secrets.OMG_SECRET }}
         port: 22
-        script: ls -a
-        
+        script: |
+          cd janusbot
+          git pull
         
         
         
