@@ -1,0 +1,27 @@
+name: format_write
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  format_write:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone
+      uses: actions/checkout@v1
+		
+		- name: check
+			run : ls -a
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
