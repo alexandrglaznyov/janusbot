@@ -18,12 +18,9 @@ jobs:
         username: ${{ secrets.USSER_SECRET }}
         key: ${{ secrets.OMG_SECRET }}
         port: 22
-        script: |
-          cd janusbot
-          git pull
-        
-        
-        
+
+    - name: pull for GitHub
+      uses: actions/checkout@v3
         
         
         
