@@ -17,7 +17,7 @@ jobs:
       with:
         host: ${{ HOST_SECRET }}
         username: root
-        key: OMG_SECRET
+        key: ${{ OMG_SECRET }}
         password: ${{ PASS_SECRET }}
         port: 22
         script: ls -a
