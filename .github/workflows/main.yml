@@ -15,10 +15,10 @@ jobs:
     - name: ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ HOST_SECRET }}
+        host: ${{ secrets.HOST_SECRET }}
         username: root
-        key: ${{ OMG_SECRET }}
-        password: ${{ PASS_SECRET }}
+        key: ${{ secrets.OMG_SECRET }}
+        password: ${{ secrets.PASS_SECRET }}
         port: 22
         script: ls -a
         
